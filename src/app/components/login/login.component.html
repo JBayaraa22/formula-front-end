@@ -1,0 +1,31 @@
+
+<form class="example-form" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+<mat-card class="example-card">
+  <mat-card-header>
+    <mat-card-title>Нэвтрэх</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+   
+      <table class="example-full-width" cellspacing="0">
+        <tr>
+          <td>
+            <mat-form-field class="example-full-width" appearance="outline">
+                <mat-label>Нэвтрэх нэр</mat-label>
+              <input matInput placeholder="Нэвтрэх нэр" formControlName="username" required>
+            </mat-form-field>
+          </td>
+        </tr>
+        <tr>
+        <td><mat-form-field class="example-full-width" appearance="outline">
+          <mat-label>Нууц үг</mat-label>
+          <input matInput placeholder="Нууц үг" formControlName="password" type="password" required>
+        </mat-form-field></td>
+      </tr></table>
+ 
+    <mat-spinner [style.display]="loading ? 'block' : 'none'"></mat-spinner>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button type="submit" color="primary">Нэвтрэх</button>
+  </mat-card-actions>
+</mat-card>
+</form>
